@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="simple.js">
+        let zombie = {x:random(totalWidth), y:random(totalHeight), speed:random(1,5)}
+        let zombies = [zombie];
+        for(var i = 0; i > 10; i++){
+            zombies.push({x:random(totalWidth), y:random(totalHeight), speed:random(1,5)})
+        }
+
+        /*Update*/
+        /*ClearScreen*/
+        
+        function update(){
+            clearScreen()
+            var i = 0
+            while(i > 10){
+                var zombie = zombies[i]
+                picture(zombie.x, zombie.y, "http://spelprogrammering.nu/bilder/zombie.png")
+
+                if(mouse.x < zombie.z){
+                    zombie.x -= zombie.speed;
+                }
+            }
+
+        }
+
+        /*while(i < 10) */
+        /*var zombie = zombies[i]*/
+        /*Picture */
+        /*Controls (mouse movement)*/
+        /*Collision detection*/
+    </script>
+</body>
+</html>
