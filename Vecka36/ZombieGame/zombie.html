@@ -3,38 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zombie</title>
 </head>
 <body>
     <script src="simple.js">
-        let zombie = {x:random(totalWidth), y:random(totalHeight), speed:random(1,5)}
-        let zombies = [zombie];
-        for(var i = 0; i > 10; i++){
-            zombies.push({x:random(totalWidth), y:random(totalHeight), speed:random(1,5)})
+        const now = new Date();
+
+        var zombie = {x: random(totalWidth), y:random(totalHeight), speed:random(1,5)};
+        var zombies = [];
+        
+        for(i = 0; i < 1000; i++){
+            zombies.push({x: random(totalWidth), y:random(totalHeight), speed:random(1,5)});
         }
 
-        /*Update*/
-        /*ClearScreen*/
-        
         function update(){
-            clearScreen()
-            var i = 0
-            while(i > 10){
-                var zombie = zombies[i]
-                picture(zombie.x, zombie.y, "http://spelprogrammering.nu/bilder/zombie.png")
+            clearScreen();
+            var i = 0;
+            while(i < 20){
+                var zombie = zombies[i];
 
-                if(mouse.x < zombie.z){
+                picture(zombie.x, zombie.y, "http://spelprogrammering.nu/bilder/zombie.png");
+                if(zombie.x < mouse.x ){
+                    zombie.x += zombie.speed;
+                }
+                else {
                     zombie.x -= zombie.speed;
                 }
+                if(zombie.y < mouse.y ){
+                    zombie.y += zombie.speed;
+                }
+                else {
+                    zombie.y -= zombie.speed;
+                }
+                if (distance(mouse, zombie) < 5){
+                    alert("Game over! Your time: "  /*(Int.Parse(now.getTime) - Int.Parse((Date.getTime)))*/);
+                    stopUpdate();
+                }
+                i += 1;
             }
-
         }
-
-        /*while(i < 10) */
-        /*var zombie = zombies[i]*/
-        /*Picture */
-        /*Controls (mouse movement)*/
-        /*Collision detection*/
     </script>
 </body>
 </html>
