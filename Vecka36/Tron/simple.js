@@ -1,4 +1,3 @@
-
 window.onload = init;
 
 Function.prototype.bind || (Function.prototype.bind = function(thisObj/*, ...boundArgs*/)
@@ -61,18 +60,7 @@ function init()
   iOSMeta.content = "yes";
   head.appendChild(iOSMeta);
   
-  let FramesPerSecond = 60;
-  const getFPS = () =>
-  new Promise(resolve =>
-      requestAnimationFrame(t1 =>
-      requestAnimationFrame(t2 => resolve(1000 / (t2 - t1)))
-      )
-  )
-  // Calling the function to get the FPS
-  getFPS().then(fps => FramesPerSecond=fps);
-
-  console.log(FramesPerSecond)
-  updatesPerSecond = FramesPerSecond;
+  updatesPerSecond = 30;
   suppressErrors   = false;
   
   // Prepare the canvas

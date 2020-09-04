@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zombie</title>
+    <style>
+        *{
+            background-color: hotpink;
+        }
+    </style>
 </head>
 <body>
+    <h1>Time:</h1>
+    <h1 id="time"></h1>
     <script src="simple.js">
-        const now = new Date();
-
-        var zombie = {x: random(totalWidth), y:random(totalHeight), speed:random(1,5)};
-        var zombies = [];
+        
+        let timeWhenStart = Math.round((new Date()).getTime() / 1000);
+        let zombie = {x: random(totalWidth), y:random(totalHeight), speed:random(1,5)};
+        let zombies = [];
+        
         
         for(i = 0; i < 1000; i++){
             zombies.push({x: random(totalWidth), y:random(totalHeight), speed:random(1,5)});
@@ -18,10 +26,12 @@
 
         function update(){
             clearScreen();
-            var i = 0;
-            while(i < 20){
-                var zombie = zombies[i];
-
+            let i = 0;
+            while(i < 12){
+                let zombie = zombies[i];
+                let currentTime = Math.round((new Date()).getTime() / 1000);
+                currentTime = currentTime-timeWhenStart
+                document.getElementById("time").innerHTML =  currentTime; 
                 picture(zombie.x, zombie.y, "http://spelprogrammering.nu/bilder/zombie.png");
                 if(zombie.x < mouse.x ){
                     zombie.x += zombie.speed;
@@ -36,7 +46,8 @@
                     zombie.y -= zombie.speed;
                 }
                 if (distance(mouse, zombie) < 5){
-                    alert("Game over! Your time: "  /*(Int.Parse(now.getTime) - Int.Parse((Date.getTime)))*/);
+                    let timeWhenEnd = Math.round((new Date()).getTime() / 1000);
+                    alert("Game over! Your time: " + (timeWhenEnd-timeWhenStart));
                     stopUpdate();
                 }
                 i += 1;
