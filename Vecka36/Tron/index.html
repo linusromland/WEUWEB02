@@ -8,7 +8,7 @@
 </head>
 <body>
       <script src="simple.js">
-                  let timeWhenStart = Math.round((new Date()).getTime() / 1000);
+        let timeWhenStart = Math.round((new Date()).getTime() / 1000);
 
           /*Background and wall*/
           fill("green");
@@ -53,12 +53,12 @@
               if(getPixel(player.x, player.y).red != 0){
                   stopUpdate();
                   let timeWhenEnd = Math.round((new Date()).getTime() / 1000);
-                  window.alert("You died because a red idiot in the way! Your Time: " + timeWhenEnd-timeWhenStart);
+                  window.alert("You died because a red idiot in the way! Your Time: " + (timeWhenEnd-timeWhenStart));
               }
               if(getPixel(player.x, player.y).green != 0){
                   stopUpdate();
                   let timeWhenEnd = Math.round((new Date()).getTime() / 1000);
-                  window.alert("You cant go thru yourself idiot!! Your Time: " + timeWhenEnd-timeWhenStart)
+                  window.alert("You cant go thru yourself idiot!! Your Time: " + (timeWhenEnd-timeWhenStart));
               }
           }
 
