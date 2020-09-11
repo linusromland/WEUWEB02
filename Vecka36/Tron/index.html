@@ -17,7 +17,7 @@
           var player = {x:100, y:100, size:5, xSpeed:5, ySpeed:0}
           /*Update är en standard function som alltid behövs*/
           function update(){
-              if(random(1,50) === 5){
+              if(random(1,5) === 5){
             circle(player.x + random(1, 500), player.y + random(1,500), 5, "red");
         }
         let length = 10;
@@ -34,7 +34,7 @@
               }
             
               if(keyboard.w){
-                player.ySpeed = -5;
+                player.ySpeed = -50;
                 player.xSpeed = 0;
               }
               if (keyboard.s){
