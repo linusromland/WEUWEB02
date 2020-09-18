@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="simple.js">
+        function start(){
+            var x = 0;
+            var y = 400;
+            while(x <= 400){
+                line(0, 0, x+20, 200, 1, "black")
+                line(400, 0, x-20, 200, 1, "red")
+                x++
+                y--
+            }
+        }
+     </script>
+</body>
+</html>
