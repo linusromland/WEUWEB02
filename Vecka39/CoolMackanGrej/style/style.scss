@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.divs{
+    width: 100px;
+    background-color: red;
+    &:hover{
+        background-color: rgb(82, 12, 12);
+    }
+}
+@for $var from 1 to 5001 {
+    #div#{$var} {
+        height: (50000px / $var);
+    }
+}

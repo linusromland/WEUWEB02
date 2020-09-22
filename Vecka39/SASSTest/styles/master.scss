@@ -1,0 +1,24 @@
+@import './_variables';
+
+header{
+    background: $main_color;
+    display: flex;
+    justify-content: center;
+    color: $textColor;
+    button{
+        background: $primaryBtn;
+        &:hover{
+            background-color: $textColor;
+        }
+        &::after{
+            content: "coool";
+        }
+    }
+}
+
+.contact{
+    button{
+        background: $primaryBtn;
+    }
+} 
+
