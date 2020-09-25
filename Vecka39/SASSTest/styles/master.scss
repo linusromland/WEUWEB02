@@ -1,10 +1,14 @@
 @import './_variables';
 
-header{
-    background: $main_color;
+@mixin coolmixing($color) {
+    background: $color;
     display: flex;
     justify-content: center;
     color: $textColor;
+}
+
+header{
+    @include coolmixing($main_color);
     button{
         background: $primaryBtn;
         &:hover{
