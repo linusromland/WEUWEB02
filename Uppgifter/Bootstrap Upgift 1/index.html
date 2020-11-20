@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronic Shop</title>
 
-    <!--IMPORT OF LOCAL BOOTSTRAP & jQuery-->
+    <!--IMPORT OF LOCAL BS4 CSS-->
     <link rel="stylesheet" href="BS/css/bootstrap.css">
-    <!--<script src="BS/js/bootstrap.js"></script>
-    <script src="JS/jquery-3.5.1.js"></script>-->
+
+    <!--IMPORT OF BS4 JS & jQuery using CDN because local didn't work-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     <!--IMPORT OF MY OWN CSS & JS-->
     <link rel="stylesheet" href="CSS/header.css">
     <script src="JS/importHeader.js"></script>
-    
+
 </head>
+
 <body onload="includeHTML()">
-    <div include-html="/header.html"></div> 
+    <div include-html="/header.html"></div>
 </body>
+
 </html>
