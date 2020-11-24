@@ -3,6 +3,7 @@
 //RETRIVED FROM W3SCHOOLS
 //RETRIVED FROM W3SCHOOLS
 //RETRIVED FROM W3SCHOOLS
+//Will change to jquery thing l8r
 function includeHTML() {
     let z, i, elmnt, file, xhttp;
     z = document.getElementsByTagName("*");
