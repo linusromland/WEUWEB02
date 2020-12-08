@@ -8,5 +8,7 @@
 
 .TitleDivThing{
     font-size: 2rem;
-    text-align: center;
+}
+.container{
+    margin-bottom: 45px;
 }
