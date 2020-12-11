@@ -1,3 +1,6 @@
+*{
+    scroll-behavior: smooth;
+}
 .jumbotron{
     text-align: center;
     background-image: url("../IMG/banner.png");
@@ -11,4 +14,7 @@
 }
 .container{
     margin-bottom: 45px;
+}
+.card{
+    margin: 2rem;
 }
